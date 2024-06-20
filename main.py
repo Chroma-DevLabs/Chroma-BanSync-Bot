@@ -126,7 +126,7 @@ async def on_ready():
     embed.add_field(name='Loaded Workers', value=f'{loaded_workers}')
     embed.add_field(name='Loaded Cogs', value=f'{loaded_cogs}')
     embed.timestamp = discord.utils.utcnow()
-    embed.set_footer('Created by discord.gg/ChromaLabs')
+    embed.set_footer(text='Created by discord.gg/ChromaLabs', icon_url=bot.user.avatar.url)
     await bot.get_cog("WebhookLogger").send_log_to_webhook(embed)
     try:
         master_user = bot.get_user(config.master_user_id)
